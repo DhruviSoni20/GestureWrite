@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="C:\Users\ASUS\OneDrive\Desktop\sem 6\Geture Write\dashboard.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Logo</div>
+            <ul class="nav-links">
+                <li><a href="C:\Users\ASUS\OneDrive\Desktop\sem 6\Geture Write\index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <button class="button" onclick="logout()">Logout</button>
+
+    <script>
+        function logout() {
+            // Clear session storage or cookies (adjust based on how you're managing the session)
+            sessionStorage.clear(); // Example for session storage
+            document.cookie = "session=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"; // Example for cookies
+
+            // Redirect to the login page
+            window.location.href = "login.html";
+        }
+    </script>
+        </nav>
+    </header>
+    <main class="dashboard-container">
+        <h2 class="dashboard-title">Dashboard</h2>
+        <div class="profile">
+            <!-- User Image Circle Placeholder -->
+            <div class="user-image">
+                <img src="static/images/profile image.png" alt="User">
+            </div>
+            <h3 class="username">User123</h3>
+            <p class="email">User123@gmail.com</p>
+            <div class="button-container">
+                    <form action="/run-script" method="POST">
+                        <button type="submit" class="start-btn">Start</button>
+                    </form>
+                <button class="saved-images-btn"><a href="{{ url_for('saved_images') }}">Saved Images</button>
+                
+            </div>
+        </div>
+    </main>
+</body>
+</html>

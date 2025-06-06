@@ -1,0 +1,177 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture Write</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Logo</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About Us.html">About Us</a></li> 
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Explore the Future of Writing with Gesture Write</h1>
+            <p>A gesture-based handwriting system that uses a webcam to create an interactive virtual smart board.</p>
+            <div class="buttons">
+                <a href="#" class="btn login-btn">Login</a>
+                <a href="#" class="btn signup-btn">Sign Up</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="D:\Geture Write\gesture write\1.png" alt="Kids writing on virtual board">
+        </div>
+    </section>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture Write</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+
+    
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                Logo
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#team-section">About Us</a></li>
+                <li><a href="#write">Get Started</a></li>
+            </ul>
+        </div>
+    </header>
+
+    
+    <!-- Home Section -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Explore the Future of Writing with Gesture Write</h1>
+            <p>A gesture-based handwriting system that uses a webcam to create an interactive virtual smart board.</p>
+            <div class="buttons">
+                <a href="{{url_for('login')}}" class="btn login-btn">Login</a>
+                <a href="{{url_for('register')}}" class="btn signup-btn">Sign Up</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/1.png') }}" alt="Kids writing on virtual board">
+        </div>
+    </section>
+
+
+
+
+    <!-- Tutorial Section -->
+    <section class="tutorial">
+        <div class="tutorial-text">
+            <h1>Start Writing with Gestures!</h1>
+            <p>Learn how to use Gesture Write in a few simple steps.</p>
+            <div class="steps">
+                <ul>
+                    <li><strong>Step 1:</strong> Grant camera access to start</li>
+                    <li><strong>Step 2:</strong> Place your hand in front of the camera</li>
+                    <li><strong>Step 3:</strong> Move your finger in the air to write</li>
+                    <li><strong>Step 4:</strong> Save Your Work</li>
+                </ul>
+            </div>
+            <div class="icons">
+                <img src="{{ url_for('static', filename='images/4.png') }}" alt="Camera Access">
+                <img src="{{ url_for('static', filename='images/5.png') }}" alt="Hand Detection">
+                <img src="{{ url_for('static', filename='images/6.png') }}" alt="Gesture Writing">
+                <img src="{{ url_for('static', filename='images/7.png') }}" alt="Save Work">
+
+                
+            </div>
+        </div>
+        <div class="tutorial-image">
+            <img src="{{ url_for('static', filename='images/3.png') }}" alt="Boy using Gesture Write">
+        </div>
+    </section>
+
+
+
+
+    <!-- Start Writing Section -->
+    <section class="hero" id="write">
+        <div class="hero-text">
+            <h1>Experience the Future of Writing</h1>
+            <p>Try Gesture Write and discover the power of gesture-based handwriting.</p>
+            <form action="/run-script" method="POST">
+                <button type="submit" class="btn cta-btn">Start</button>
+            </form>
+           
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/2.png') }}" alt="Gesture Write Welcome Image">
+        </div>
+    </section>
+
+
+
+
+     <!-- Team Section -->
+     <section class="team-section" id="team-section">
+        <h1>Meet the Gesture Write Team!</h1>
+        <p>We bring ideas to life with creativity and technology</p>
+
+        <div class="team-container">
+            <div class="team-row">
+                <img src="{{ url_for('static', filename='images/8.png') }}" alt="Dhruvi, Krishna , Manasvi">
+                <div class="team-names">
+                    <h3>Dhruvi Soni</h3>
+                    <h3>Krishna Soni</h3>
+                    <h3>Manasvi Vachhani</h3>
+                </div>
+            </div>
+
+            <div class="team-row">
+                <img src="{{ url_for('static', filename='images/9.png') }}" alt="Tanvi and Rishi">
+                <div class="team-names">
+                    <h3>Tanvi Sheikh</h3>
+                    <h3>Rishi Shah</h3>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+     <!-- Footer -->
+     <footer>
+        <div class="footer-content">
+            <h3>Logo</h3>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+        </div>
+        <p>&copy;2024 Gesture Write. All rights reserved</p>
+    </footer>
+
+
+
+
+</body>
+</html>

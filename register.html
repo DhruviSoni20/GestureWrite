@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Signup</title>
+    <link rel="stylesheet" href="C:\Users\ASUS\OneDrive\Desktop\sem 6\Geture Write\login.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Signup Form -->
+    <div class="form-card">
+        <div class="form-header"></div>
+        <h2>User SignUp</h2>
+
+        <form action="{{ url_for('register') }}" method="post">
+            <label id="email-id">Username</label><br>
+            <input name="Username" type="text" class="textbox" size="30" required/><br><br>
+            <label id="password">Password</label><br>
+            <input name="Password" type="password" class="textbox" size="30" required/><br><br><br>
+            <button class="btn signup-btn">Sign Up</button>
+        <button class="btn login-btn"><a href="login.html" class="btn-link">Login</a></button>
+        </form>
+
+        <!-- <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username">
+        </div>
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password">
+        </div> -->
+
+
+
+       
+    </div>
+</div>
+
+<!-- Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

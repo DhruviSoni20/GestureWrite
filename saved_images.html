@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Images</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='saved images.css') }}">
+</head>
+<body>
+ 
+    <main class="saved-images-container">
+        <h2 class="saved-images-title">Saved Images</h2>
+        
+        <div class="no-images-placeholder">
+            <!-- Placeholder Image for No Saved Images -->
+            <img src="{{ url_for('static', filename='images/no images yet.png') }}" alt="No Images" class="no-images-img">
+            <p class="no-images-text">No photos yet</p>
+            <p class="no-images-subtext">All saved photos will be shown here</p>
+        </div>
+
+        <button class="back-button"><a href="{{url_for('dashboard')}}">Back to Dashboard</a></button>
+    </main>
+</body>
+</html>
